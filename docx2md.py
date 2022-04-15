@@ -45,7 +45,7 @@ def docx_2_md(dires):
             media = dires + 'media'
 
             os.makedirs(name=(container + "\\"), exist_ok=True)
-            cmd = 'pandoc --extract-media=./ --markdown-headings=atx --wrap=none --toc -f docx -t markdown "{inp}" -o "{out}" && move "{media}" "{container}"'.format(inp=docx_file, out=md_file, media=media, container=container)
+            cmd = 'pandoc --extract-media=./ --markdown-headings=atx --wrap=none --toc -f docx -t markdown_strict "{inp}" -o "{out}" && move "{media}" "{container}"'.format(inp=docx_file, out=md_file, media=media, container=container)
 
             try:
                 move = 'move "{name}" "{container}"'.format(name=md_file, container=container)
