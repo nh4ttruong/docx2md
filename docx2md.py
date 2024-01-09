@@ -60,10 +60,10 @@ def docx_2_md(dires):
 def name_file(path):
     if os.path.basename(path).__contains__('.docx'):
         new_name = ""
-        if path.__contains__("19522445_writeup-"):
-            new_name = path.replace("19522445_writeup-", '')
-        elif path.__contains__("19522445_"):
-            new_name = path.replace("19522445_",'')
+        if path.__contains__("ctf_writeup-"):
+            new_name = path.replace("ctf_writeup-", '')
+        elif path.__contains__("ctf_"):
+            new_name = path.replace("ctf_",'')
         else:
             new_name = path
         return new_name
@@ -85,6 +85,6 @@ def convert(list_path):
         print('Convert successful!')
 
 new_folder = "convert_done"
-paths = ['C:\\Users\\truon\\Desktop\\HK6\\NT213-BMW\\BT3.1\\only-docx\\', 'C:\\Users\\truon\\Desktop\\HK6\\NT213-BMW\\BT4.1\\only-docx\\', 'C:\\Users\\truon\\Desktop\\HK6\\NT213-BMW\\BT5.1\\only-docx\\']
+paths = ['C:\\WindowsPath\\only-docx\\', 'C:\\WindowsPath\\only-docx\\', 'C:\\WindowsPath\\only-docx\\']
 convert(paths)
 print("DONEEEEEEE!")
